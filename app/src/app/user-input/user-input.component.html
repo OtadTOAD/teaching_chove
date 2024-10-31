@@ -1,0 +1,20 @@
+<form [formGroup]="dataOutput">
+  <fieldset>
+    <legend>Input</legend>
+
+    <label for="id">ID</label>
+    <input formControlName="id" type="text" id="id" name="id" />
+
+    <label for="name">Name</label>
+    <input formControlName="name" type="text" id="name" name="name" />
+
+    <label for="likes">Likes</label>
+    <input formControlName="likes" type="number" id="likes" name="likes" />
+
+    <button (click)="onSubmit()">SUBMIT</button>
+
+    <p>Here -></p>
+    <p>[{{ dataOutput.value | json }}]</p>
+    <p>[{{ dataOutput.controls.likes.errors | json }}]</p>
+  </fieldset>
+</form>

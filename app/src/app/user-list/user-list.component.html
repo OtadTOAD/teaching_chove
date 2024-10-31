@@ -1,0 +1,3 @@
+@for (item of users; track item.id) {
+<app-user-item [data]="item" (event)="onDelete($index)" />
+}
